@@ -42,7 +42,7 @@ JWT_SECRET = os.getenv('JWT_SECRET', 'your-secret-key')
 @app.route('/api/auth/login', methods=['OPTIONS'])
 def handle_options():
     response = make_response()
-    response.headers.add("Access-Control-Allow-Origin", "https://trade-zone-five.vercel.app")
+    response.headers.add("Access-Control-Allow-Origin", "http://flask-backend-production-502c.up.railway.app")
     response.headers.add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
     response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
     response.headers.add("Access-Control-Allow-Credentials", "true")
@@ -53,7 +53,7 @@ def handle_options():
 def handle_options():
     if request.method == 'OPTIONS':
         response = make_response()
-        response.headers["Access-Control-Allow-Origin"] = "https://trade-zone-five.vercel.app"
+        response.headers["Access-Control-Allow-Origin"] = "http://flask-backend-production-502c.up.railway.app"
         response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
         response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
         response.headers["Access-Control-Allow-Credentials"] = "true"
@@ -63,7 +63,7 @@ def handle_options():
 # Apply CORS headers after each response
 @app.after_request
 def apply_cors(response):
-    response.headers["Access-Control-Allow-Origin"] = "https://trade-zone-five.vercel.app"
+    response.headers["Access-Control-Allow-Origin"] = "http://flask-backend-production-502c.up.railway.app"
     response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
     response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
     response.headers["Access-Control-Allow-Credentials"] = "true"
