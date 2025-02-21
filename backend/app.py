@@ -23,7 +23,7 @@ app = Flask(__name__)
 # Enable CORS with credentials
 CORS(app, resources={
     r"/api/*": {
-        "origins": "*",
+        "origins": "https://stunning-tapioca-493d9b.netlify.app",
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"],
         "supports_credentials": True
